@@ -1,0 +1,48 @@
+<%-include("partials/Userheader")%>
+
+<input id="pageteller" type="hidden" name="page" value="home" />
+<%function compare( a, b ) {if ( a.followeePost.time < b.followeePost.time ){%>
+    <%return 1;}if ( a.followeePost.time > b.followeePost.time ){%>
+    <%return -1;}return 0;}%>
+
+<div id="postcontainer">
+
+<% let alltheposts=posts.sort(compare);%>
+<% if(alltheposts.length===0){ %>
+  <input id="postlen"type="hidden" name="" value="show">
+<%}%>
+<% let postToShow=alltheposts.slice(0,9);%>
+
+
+<%alltheposts.forEach(function(post){%>
+
+<div class="col col-lg-4 col-xl-4 col-md-6 col-sm-6 flip-card">
+  <div class="col-xl-12 col-lg-12 col-md-12 postBox flip-card-inner">
+    <div class="flip-card-front">
+<button type="button" name="openButton" class="openButton btn" onclick="window.location.href='/posts/<%=post.followeePost._id%>'" >Open</button>
+<img class="photoOnHP" src="<%=post.photo%>" onclick="window.location.href='/<%=post.username %>/profile'"/>
+
+<div class="col-lg-12">
+<p></p>
+<a href="/<%=post.username%>/profile" class="userNameLink usernameOnHP"><%=post.username%></a>
+</div>
+<form class="checkBoxForm" action="/itemlist" method="post">
+<p class="postContent">
+<%if(post.followeePost.content.length>300){ %>
+    <%=post.followeePost.content.substring(0,300)+"..."%>
+    <a href="/posts/<%=post.followeePost._id%> ">Readmore</a>
+  <%}else{%>
+<%=post.followeePost.content%>
+<%}%>
+</p>
+</form>
+</div>
+
+</div>
+  </div>
+<%})%>
+</div>
+
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<%-include("partials/footer");-%>

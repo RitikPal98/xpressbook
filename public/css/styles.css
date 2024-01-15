@@ -1,0 +1,626 @@
+.photo{
+  border:7px solid #079997;
+  box-shadow: #ccc 1px 2px 10px;
+}
+.allusers{
+  min-height: 70px;
+  box-shadow: 0px 0.5px #ccc;
+  border-radius: 0px;
+
+}
+.userbiodata{
+  border: none
+}
+.container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+.navbar {
+    padding-top: 7px;
+    padding-bottom: 1px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 11px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 60px;
+}
+.navbar-nav  li a:hover {
+    color: #1abc9c !important;
+}
+.navbar-nav  li a {
+    color: White !important;
+}
+body{
+  /* background: rgb(235,235,245); */
+}
+
+.footer-padding {
+  position: sticky;
+  margin-top: 50px;
+	padding-bottom: 20px;
+}
+
+h1{text-align: center;}
+.footer {
+  margin: 100px 0 0 0;
+	position:fixed;
+  bottom: 0;
+  text-align:center;
+	width: 100%;
+	height: 30px;
+	background-color:#b85042;
+  letter-spacing:0.18rem;
+padding-left: 0;
+padding-right: 0;
+}
+
+#featherlogo{
+  color: green;
+ text-shadow: black 1px 2px 10px;
+position: relative;
+bottom: 9px;
+
+}
+#writing{
+  font-style: italic;
+  color: rgb(100,30,10);
+position: relative;
+top: 10px;
+left: 5px;
+text-shadow: black 1px 1px 10px;
+}
+button#checkboxid{
+  color: rgb(160,10,10);
+font-size: 3.5rem;
+position:absolute;
+left:2px;
+top:20px;
+transform: rotate(270deg);
+background: none;
+border: none;
+outline:none;
+}
+button#checkboxid:hover{
+  text-shadow:1px 2px 4px red;
+
+}
+.buttonsBox{
+position: fixed;
+bottom: 0;
+right: 0;
+margin-top: 0;
+z-index: 2;
+}
+
+#deleteButtonClicked{
+  text-shadow: 2px 2px 10px black;
+
+  }
+form.checkBoxForm{
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+div.row{margin: 0;}
+div.postBox{
+margin: 20px 0;
+/* text-align: center; */
+text-align: center;
+  height: 421px;
+  border: 1px solid #777 ;
+  box-shadow: 1px 2px 10px  #ccc;
+  background:linear-gradient(to bottom ,#F0FFF0,#fdfff5,#fdfff5,#fdfff5,#fdfff5,#fdfff5,#F0FFF0);
+  border-radius: 7px 7px;
+/* background-image:url("/11.jpg");
+background-size: cover; */
+
+}
+#postBoxOnPP{
+  min-height: 70vh;
+  height:auto;
+
+}
+#postContentOnPP{
+  /* letter-spacing: 0.4px; */
+  word-spacing: 0.7rem;
+  line-height: 3.7rem;
+padding: 25px;
+padding-bottom: 30px;
+text-align: left !important;
+font-family:'Roboto',sans-serif;
+}
+
+
+.titlebox{
+  text-align: center;
+  margin:15px;
+}
+
+p.postContent{
+  margin-top: 41px;
+  padding: 11px;
+font-family: 'Josefin Sans', sans-serif;
+color:rgb(80,80,100);
+  line-height: 3.5rem;
+  word-spacing: 3px;
+  font-size: 1.74rem;
+  text-align:center;
+  text-shadow: 0.4px 0.4px 0.5px #ccc;
+}
+#postContentOnUPP{
+  padding:21px
+}
+p span {
+font-size: 4.5rem;
+}
+p.navbar-brand{
+  position: relative;
+  bottom: 7px;
+  right:15px;
+  font-family:'Nunito', sans-serif;
+text-shadow: 2px 1px 7px black;
+}
+.buttonShadow{
+  text-shadow: 1px 2px 10px White;
+}
+button.likebutton{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+border: none;
+outline:none;
+background: none;
+color:#777;
+}
+button.commentbutton{
+  position: absolute;
+  bottom: 0;
+  left: 40px;
+border: 0px;
+outline: none;
+background: none;
+color:#777
+}
+
+.colorChanger{
+  color: rgb(210,10,10);
+}
+.noOflikes{
+  font-weight: bold;
+  font-family:serif;
+  position: absolute;
+  bottom: 20px;
+  left:10px;
+}
+.noOfcomments{
+  font-weight: bold;
+  font-family:serif;
+  position: absolute;
+  bottom: 20px;
+  left:51px;
+}
+button.sharebutton{
+  position:absolute;
+  left: 80px;
+  bottom: 0;
+  outline:none;
+  background: none;
+  border:0px;
+  color:#777
+
+}
+
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #fff;
+}
+
+/* #navbarbox{
+  position: fixed;
+  top:0;
+  width:100%;
+  opacity: 1;
+
+} */
+
+.userPhotoOnPP{
+  height:51px;
+  width:51px;
+  position: absolute;
+  right:10px;
+  top:7px;
+  border-radius: 50%;
+}
+.photoPosition{
+  top:-10px;
+}
+.usernameButton{
+  color:#777;
+  background: none;
+  font-size: 1.7rem;
+  font-family: 'Josefin Sans', sans-serif;
+position:relative;
+top:4px;
+
+text-decoration: none;
+  }
+  .usernameButton:hover{
+    color: black;
+    text-decoration: none;
+  }
+.usernameBoxOnPP{
+  position:inherit;
+  top:0;
+left:-2vw
+}
+.comments-mainBox{
+  text-align: left;
+  margin: 10px;
+border: 1px solid #ccc;
+padding: 4px;
+border-radius: 4px;
+min-height: 200px;
+}
+.commentBy{
+  border-radius: 15px;
+  color: black;
+  font-size: 1.37rem;
+  text-overflow:visible;
+  letter-spacing: 1.6px;
+  font-family: "Josefin";
+  padding: 0;
+}
+.commentText {padding: 0}
+.commentsBox{
+  overflow:visible;
+}
+.commenterPhoto{
+  float: right;
+  height:31px;
+  width:31px;
+  border-radius: 50%;
+
+}
+
+.openButton{
+  position: absolute;
+  bottom: 2px;
+  right:2px;
+  border-radius:7px 10px;
+  background: #079997;
+  box-shadow: 1px 1px 5px #ccc;
+  outline: none;
+  color:white;
+
+}
+.openButton:hover{
+  zoom:1.1;
+
+}
+.userBioButton{
+ /* profile edit button  */
+font-size: 1.6rem;
+position: relative;
+left:-140px;
+top:37px;
+background: #b85042;
+}
+.userbiodata{
+  text-align: center;
+  color:grey
+}
+.userNameLink{
+  font-size: 1.6rem;
+  text-decoration: none;
+  color:black;
+}
+#followbuttonOnPU{
+  margin-top: 11px;
+  position: absolute;
+  border-radius: 7px  7px;
+}
+.user_page_spacing{height: 20px;}
+.usernamecolumn{
+  position:relative;
+  top:15px;
+font-family:'Josefin Sans',sans-serif;
+text-shadow: 1px 2px 6px #ccc;
+
+}
+#photoEdit{
+  border-radius: 50%;
+  border:7px solid #097770;
+  height: 200px;
+  width:200px;
+  margin-left:14% !important;
+}
+input[type="file"] {
+opacity: 0;
+overflow: hidden;
+position: absolute;
+z-index: -1;
+}
+.inputSpacing{
+  margin-top:7px;
+}
+.composeElements{
+  font-size: large
+}
+.spacingForbuttons{
+  margin: 10px;
+  padding-left: 110px
+}
+.glow{
+  box-shadow: 0px 0px 4px #097770;
+  height:57px;
+  width:57px;
+  border: 0.5px solid #079997;
+  position: absolute;
+  right:10px;
+  top:7px;
+  border-radius: 50%;
+}
+.notification{
+  padding: 0px;
+border-radius:0;
+box-shadow:none;
+font-size: 1.3rem;
+padding-left:0;
+}
+.icons{
+  padding: 0;
+  margin:1.3vw
+}
+.or{
+  position:relative;
+  width:30px;
+  padding-left: 4px;
+  padding-left: 4px;
+  left:45%;
+  top:30px;
+  color:white;
+background:#079997;
+cursor: crosshair;
+border:none}
+.navbar-icons{
+  margin-top: 7px;
+  position:relative;
+  height:2.4rem;
+  width:2.4rem;
+
+}
+#profileIcon{
+  height: 3.1rem;
+  width: 3.1rem;
+border-radius:50%;
+border:1px solid rgb(20,70,20);
+}
+#optionsboxhomepage{
+  display:none
+}
+#iconsboxBottom{
+  display: none;
+}
+.menu{
+  position: absolute;
+  top:-4px;
+  right:-31px;
+  height:3.7rem;
+  width: 3.6rem;
+cursor:pointer;
+}
+.navbar-right{
+  margin-right: -100px;
+}
+#composeButton{
+  border:2px solid white;
+padding: 3px;
+padding-top: 0.4px;
+padding-bottom: 9px;
+border-radius: 29%
+ }
+ .composeicon{
+   height:1.67rem;
+   width:1.67rem
+ }
+
+ .iconsBoxTop{padding:0}
+@media only screen and (max-width: 760px){
+.footer{height:41px;}
+#photoEdit{margin: 0 100px 30px 100px;}
+#iconsboxBottom{display:inline-block;bottom:4px}
+#postContentOnPP{
+  padding:1px;
+  padding-top: -15px;
+  padding-bottom:40px;
+line-height: 2.6rem;
+font-size:1.5rem
+}
+.iconsBoxTop{display: none;}
+.icons{  margin: 22px}
+.navbar-icons{height:2.2rem; width:2.2rem;margin-top:9px;}
+.menu{height: 3.5rem;width: 3.6rem;top:-21px}
+#toggleSlide{position: absolute;
+right:-75vw;
+top:-71px;
+}
+p.navbar-brand{
+  /* color: white !important; */
+  font-size: 1.87rem;}
+.navbar{height:51px;}
+p span {
+font-size: 4.6rem;
+}
+#photoEdit{
+  border:4px solid #097770;
+  height: 180px;
+  width:180px;
+  margin-left:15% !important;
+}
+
+p.postContent{
+  margin-top: 41px;
+  padding: 5px;
+font-family: 'Josefin Sans', sans-serif;
+  line-height: 3.2rem;
+  font-size: 1.5rem;
+}
+#followbuttonOnPU{font-size:11.5px;padding-top:5px;padding-bottom:5px }
+#composeButton{padding-bottom: 12px;}
+#loginForm{margin-top:81px;}
+#signupForm{margin-top:81px;}
+#featherlogo{font-size:2.4rem;left:-6px;}
+#writing{font-size: 2.4rem;left:-2px;top:5px}
+#detailEditBox{
+  margin-top: 30px;
+  border-top:1px solid #777;
+  padding-top: 30px;
+}
+button.likebutton{font-size:1.21rem }
+.commentbutton{font-size:1.21rem }
+.sharebutton {font-size:1.21rem }
+.userPhotoOnPP{height:40px;width:40px}
+.glow{height:40px;width:40px}
+.usernameButton{font-size: 1.5rem}
+.commenterPhoto{height:25px;width:25px}
+.commentBy{font-size: 1.15rem}
+.noOflikes{font-size:12px}
+.noOfcomments{font-size:12px}
+.comments-mainBox{padding-left:0;padding-right: 0;margin-left: 0;margin-right: 0}
+.entercomment{padding-left:4px;padding-right: 0;font-size:12.5px}
+.buttonOnPeoplepage{font-size:11px;margin-left:36px}
+.userNameLink{font-size: 1.37rem;}
+}
+@media only screen and (max-width: 365px){
+.navbar{height:51px;}
+.footer{height:33px;}
+.icons{margin: 21px;}
+p.navbar-brand{
+  font-size: 1.4rem;}
+.navbar-icons{height:1.87rem; width:1.87rem}
+#profileIcon{
+  height: 2.5rem;
+  width: 2.5rem;}
+#photoEdit{margin-left:6% !important;}
+  #composeButton{
+  border:1.4px solid white;
+  padding: 3.5px;
+  padding-top: 0px;
+  padding-bottom: 10.4px;
+  border-radius: 29%
+   }
+  .menu{height:30px;width:30px;}
+}
+@media only screen and (max-width: 322px){
+  .icons{margin:17px }
+}
+/* body{
+  background-image: linear-gradient(to right,#097770,#ccc,#b85042);
+} */
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.box{
+  display: none;
+position:fixed;
+top:0;
+left: 0;
+width:200px;
+height:100%;
+z-index: 4;
+/* ,#b5d0cd */
+background-image:linear-gradient(to right,#075f5a,#097770,#079997);
+opacity: 0.8
+}
+.boxLinks{
+  padding-top: 45px;
+  padding-left: 10px
+}
+#likebutton{
+  position: absolute;
+  top:90%
+}
+.searchBar{
+margin-top:25px;
+padding-left:4%;
+padding-right:2%;
+margin-bottom: 75px
+}
+.searchBox{
+  padding-left: 1%;
+  padding-right: 1%
+}
+.clearAllbutton{
+  padding: 6px;
+  font-size: 1.34rem;
+  position:absolute;
+  right:2%;
+
+
+}
+.innerNotificationBar{
+  padding-left:17px;
+  padding-right:30px;
+}
+.notificationbox{
+  margin-top: 26px
+}
+.headerMenu{
+  margin-right: 29px
+}
+.photoOnHP{
+  height:41px;
+  width: 41px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  position: absolute;
+  top: -9px;
+  left:-17px;
+  box-shadow: 1px 1px 2px  #ccc;
+background: white;
+}
+.usernameOnHP{
+  color: #777;
+  position: absolute;
+  left:16px;
+  top:2px;
+  font-size: 1.3rem;
+
+}
+.usernameOnHP:hover{text-decoration: none;}
+.date{
+position: absolute;
+bottom: -51px;
+left: -35px;
+border: none;
+font-size: 1.14rem;
+}
+.notifyiconBox{
+  display: inline;
+}
+
+.loader {
+display:none;
+position:absolute;
+left:147px;
+top:60px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #097770;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 1s linear infinite; /* Safari */
+  animation: spin 1s linear infinite;
+}
+#detailEditBox{
+  padding-right: 0px;
+  padding-left: 0px;}

@@ -1,0 +1,19 @@
+<%-include("partials/Userheader")%>
+<div class="user_page_spacing"></div>
+    <%users.forEach(function(user){%>
+<div class="allusers">
+    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+<div class=" col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-2">
+  <img class="userPhotoOnPP " src="<%=user.photo%>"/>
+</div>
+  <div class=" usernamecolumn  col-lg-8 col-md-8 col-sm-8 col-xs-6 col-xl-8">
+<a href="/<%=user.username %>/profile" class="userNameLink"><%=user.username%></a>
+<p style="font-size:12px"class="text-muted"><%=user.fullName%></p>
+  </div>
+<div class=" col col-lg-3 col-xl-3 col-md-3 col-sm-3 col-xs-3">
+  <span class="follow btn buttonOnPeoplepage"id="followbuttonOnPU" onclick="window.location.href='/<%=user.username %>/profile'">Open</span>
+  </div>
+  </div>
+</div>
+<%});%>
+<%-include("partials/footer");%>

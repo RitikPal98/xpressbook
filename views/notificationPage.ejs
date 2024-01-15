@@ -1,0 +1,42 @@
+<%-include("partials/Userheader");%>
+<input id="pageteller" type="hidden" name="page" value="notification" />
+
+<form  action="/clearNotifications" method="post">
+  <button type="submit" class="btn btn-danger btn-sm clearAllbutton"
+   name="button">Clear all</button>
+
+</form>
+
+<div class="container notificationbox">
+  <%let urlVariable=""; let displayoutput="";%>
+  <%notifications.reverse().forEach(function(notification){%>
+<div class="allusers notification">
+<div class="innerNotificationBar col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+  <div class=" col col-xl-2 col-lg-2 col-md-1 col-sm-1 col-xs-2">
+    <br>
+
+      <%if(notification.what==="start following you"){%>
+    <img class="glow" src="<%=notification.photo%>"/>
+     <% urlVariable=notification.from+"/profile";displayoutput="inline-block";}else{%>
+    <img class="userPhotoOnPP" src="<%=notification.photo%>"/>
+     <%if(notification.what==="has posted something new"){%>
+    <%urlVariable=notification.from+"/profile";displayoutput="none"%>
+  <%}else{urlVariable="posts/"+notification.idOfPost;displayoutput="none"}%>
+     <%}%>
+
+  </div>
+  <div class=" usernamecolumn col-lg-7 col-xl-7 col-md-8 col-sm-8 col-xs-7 col-xl-8">
+  <a href="/<%=notification.from%>/profile" class="userNameLink"><%=notification.from%></a>
+  <a href="/<%=urlVariable%>" class="text-muted" id="message"><%=notification.what%></a>
+  </div>
+
+<div class=" col col-lg-3 col-xl-3 col-md-3 col-sm-3 col-xs-3">
+<span style="display:<%=displayoutput%>"
+onclick="window.location.href='/<%=notification.from%>/profile'"
+  class="follow"id="followbuttonOnPU">See</span>
+</div>
+</div>
+</div>
+<%});%>
+</div>
+<%-include("partials/footer");%>

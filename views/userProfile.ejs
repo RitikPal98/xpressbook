@@ -1,0 +1,82 @@
+<%-include("partials/Userheader")%>
+
+      <div class=" profilecontainer row mt-1">
+      <div class="photoContainer left col-lg-4">
+        <div class="photo-left">
+          <img class="photo" src="<%=photo%>"/>
+        </div>
+        <h4 class="name"><%=username%></h4>
+          <p class="desc text-muted"><%=fullName%></p>
+          <div class="stats row">
+          <div class="stat col-xs-4" style="padding-right: 50px;">
+            <p class="number-stat"><%=followers%></p>
+            <a href="/people/<%=userId%>/followers" class="desc-stat">Followers</a>
+          </div>
+          <div class="stat col-xs-4">
+            <p class="number-stat" ><%=following%></p>
+            <a href="/people/<%=userId%>/following" class="desc-stat">Following</a>
+          </div>
+          <div class="stat col-xs-4" style="padding-left: 50px;">
+            <p class="number-stat"><%=uploads%></p>
+            <a class="desc-stat">Uploads</a>
+          </div>
+        </div>
+        <!-- ================================================================================= -->
+          <p name="userBioData" class="form-control userbiodata " rows="8" cols="80"><%=userBio%></p>
+<div class="spacingForbuttons">
+          <button  type="submit" class=" btn btn-warning userBioButton"
+          onclick="window.location.href='/edit'"  value="<%=username%>" name="bioEditButoon"
+          style="display:<%=display%>"
+          >Edit</button>
+        <!-- ================================================================================= -->
+        <form  action="/<%=follow%>" method="post">
+          <button class="btn follow"><%=followBtn%></button>
+          <input type="hidden" name="postuser" value="<%=username%>" />
+          <input type="hidden" name="postId" value="<%=username%>" />
+        </form>
+</div>
+
+
+      </div>
+
+      <div class="col-lg-8">
+        <ul id="navPost" class="nav navProfile">
+          <li>Posts</li>
+
+        </ul>
+
+
+        <div class="row gallery">
+
+          <%posts.forEach(function(post){%>
+<div class=" col col-xl-6 col-lg-6 col-md-6 col-sm-6">
+  <div class="col-xl-12 col-lg-12 col-md-12 postBox ">
+    <button type="button" name="openButton" class="openButton btn"
+    onclick="window.location.href='/posts/<%=post._id%>'" >Open</button>
+<p class="desc date"><%=post.time%></p>
+  </div>
+
+          <form class="checkBoxForm" action="/itemlist" method="post">
+
+            <button id="checkboxid"style="display:<%=display%>"
+             type="checkbox" name="items" value="<%=post._id%>"
+              onchange="this.form.submit()"><i class="far fa-calendar-times"></i>
+            </button>
+
+          <p  id="postContentOnUPP"class="postContent">
+            <%if(post.content.length>265){ %>
+                <%=post.content.substring(0,265)+"..."%>
+                <a href="/posts/<%=post._id%> ">Readmore</a>
+              <%}else{%>
+            <%=post.content%>
+            <%}%>
+          </p>
+          </form>
+            </div>
+          <%})%>
+
+        </div>
+      </div>
+      </div>
+
+<%-include("partials/footer");-%>

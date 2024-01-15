@@ -1,0 +1,44 @@
+<%-include("partials/Userheader")%>
+<input id="pageteller" type="hidden" name="page" value="people" />
+
+<div id="searchpage"class="container">
+<!-- Search Box -->
+<div class="searchBox">
+
+
+<div class="searchBar col-lg-12">
+<form class="" action="/search" method="post">
+  <div class="col-lg-10 col-lg-10 col-md-8 col-sm-8 col-xs-8" style="padding:0px">
+    <input class="form-control" type="search" name="searchValue"
+    placeholder="name or username">
+  </div>
+  <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    <button type="submit" class="btn btn-primary" name="button">Search</button>
+  </div>
+</form>
+</div>
+
+<div class="user_page_spacing"></div>
+    <%users.forEach(function(user){%>
+<div class="">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 " style="margin-top:7px;">
+<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-2">
+  <img class="userPhotoOnPP " src="<%=user.photo%>"/>
+</div>
+  <div class=" usernamecolumn  col-lg-8 col-md-8 col-sm-8 col-xs-6 col-xl-8">
+<a href="/<%=user.username %>/profile" class="userNameLink"><%=user.username%></a>
+<p class="text-muted"><%=user.fullName%></p>
+  </div>
+<div class=" col col-lg-3 col-xl-3 col-md-3 col-sm-3 col-xs-3">
+  <span class="follow btn"id="followbuttonOnPU" onclick="window.location.href='/<%=user.username %>/profile'">Open</span>
+  </div>
+  </div>
+</div>
+<%});%>
+</div>
+</div>
+
+
+
+
+<%-include("partials/footer");%>

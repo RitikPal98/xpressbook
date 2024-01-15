@@ -1,0 +1,86 @@
+<%-include("partials/Userheader");-%>
+
+<div class=" row">
+<div class="right col-lg-12  postBox" id="postBoxOnPP">
+  <p class="postContent" id="postContentOnPP"><%=content%></p>
+<p style="right:0" class="desc date"><%=time%></p>
+<div class="refreshing2">
+  <input type="hidden" id="liketeller" value="<%=likeAndDislike%>" />
+</div>
+<input type="hidden" name="forchecking" value="<%=likeAndDislike%>">
+  <form id="likeform" action="" method="post">
+    <button class="likebutton" id="" type="submit" name="likebutton" onclick="buttonColorChanger()"  ><i class="fas fa-heart fa-2x "></i></button>
+    <input id="postidInput" type="hidden" name="postId" value="<%=postId%>">
+    </form>
+    <button  class="commentbutton" type="button" name="commentbutton" onclick="window.location.href='#commentBox'"  ><i class="fas fa-comment fa-2x"></i></button>
+<div id="refreshing">
+  <p class="noOflikes"><%=noOfLikes%></p>
+</div>
+<div id="refreshingCommentsno">
+<p class="noOfcomments"><%=noOfComments%></p>
+</div>
+
+  <form id="shareform" action="/share" method="post">
+    <button class="sharebutton" type="submit" name="sharebutton"><i class="fas fa-share fa-2x"></i></button>
+
+    <input type="hidden" name="postId" value="<%=postId%>"></input>
+
+</form>
+
+</div>
+  </div>
+  <hr>
+<div class=" row userBox">
+    <div class=" col col-lg-1 col-xl-1  left col-md-1 col-sm-1 col-xs-2">
+        <img class="userPhotoOnPP photoPosition" src="<%=photo%>"/>
+    </div>
+    <div class=" col col-lg-9 col-xl-9 col-md-9 col-sm-9 col-xs-7 usernameBoxOnPP">
+         <a  class="usernameButton" href="/<%=postBy%>/profile"><%=postBy%></a>
+    </div>
+    <div style="padding:0" class="col col-lg-2 col-xl-2 col-md-2 col-sm-2 col-xs-3">
+      <form class="follow-Form" action="/<%=followButton%>" method="post">
+        <button style="font-size:12px"
+         id="followButtonId" type="submit" class="btn btn-primary btn-block"
+         name="followButton"value="postPage"><%=followButton%></button>
+        <input type="hidden" name="postuser" value="<%=postBy%>"></input>
+        <input type="hidden" name="postId" value="<%=postId%>"></input>
+        <h4 id="followH4Id" style="display:none;"><%=followButton%></h4>
+      </form>
+      </div>
+</div>
+
+<div class="col col-lg-12 ">
+  <hr>
+<form id="commentform" action="/comments" method="post">
+  <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-xs-10 "
+  style="padding-right: 9px;padding-left: 0px;">
+    <input  class=" form-control entercomment" type="text" name="comment"
+    placeholder=" Add a comment" value="" autocomplete="off" required></div>
+  <button style="font-size:12px"
+   class="btn btn-primary col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2"
+   type="submit" id="sendButton buttonfontsize" name="userId">send</button>
+<input type="hidden" name="postId" value="<%=postId%>">
+</form>
+
+<div class="row">
+<div class="col col-xl-12 col-lg-12 col-xs-12 comments-mainBox">
+  <div  id="commentBox" class="commentsBox">
+    <%postComments.reverse().forEach(function(comment){%>
+      <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-xs-2">
+        <img class="commenterPhoto" src="<%=comment.photo%>" alt="">
+      </div>
+      <div class="col-lg-11 col-xl-11 col-md-11 col-sm-11 col-xs-9">
+        <div class="commentBy col col-lg-12">
+          <p><%=comment.by%></p>
+        </div>
+        <div class="commentText col-lg-12">
+          <p style="text-shadow:1px 2px 10px #ccc;border-radius:7px;padding:0;margin-bottom: 0px;font-size:12px;"><%=comment.text%></p><br>
+        </div>
+        </div>
+    <%})%>
+  </div>
+</div>
+</div>
+</div>
+
+<%-include("partials/footer");-%>

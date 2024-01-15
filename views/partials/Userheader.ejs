@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="/icon.jpg">
+  <title>XpressBook</title>
+  <meta charset="utf-8">
+<!-- bootstrap script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- googlefonts -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&family=Merienda+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600'>
+<!-- ``````````````````````````````` -->
+    <link rel="stylesheet" href="/css/style-userProfile.css">
+<!-- ```````````````````````````````````````````````````````````````````````` -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <nav id="navbarbox" class="navbar navbar-inverse" style="background:#097770" >
+    <div  class="container col-xl-12 col-lg-12 col-sm-12 col-md-12 col-xs-12"   >
+          <div class="navbar-header col-lg-7 col-md-5 col-xl-6 col-sm-5 col-xs-11.1">
+        <div class="col-lg-2 col-md-0.5 col-sm-0.5  col-xs-0.1" ></div>
+        <p class="navbar-brand" onclick="window.location.href='/'"><i id="writing" class="fas fa-signature fa-2x"></i><i id="featherlogo" class="fas fa-feather-alt fa-2x"></i><span>X</span>pressBook</p>
+      </div>
+<div class="col-lg-5 col-md-5.5 col-sm-7 col-xs-2">
+<div class="col-lg-10 col-md-10 col-sm-10 col-xs-11">
+  <a id="home" class="icons iconsBoxTop" href="/"><img  id="homeicon"class="navbar-icons" src="/icons/home.png"></a>
+  <a id="composeButton"href="/compose"class="icons iconsBoxTop"><img id="composeicon" class="navbar-icons composeicon" src="/icons/plus.png"></a>
+  <a id="notificationbutton"href="/notifications" class="icons iconsBoxTop"
+  ><img id="bellicon"class="navbar-icons changebell" src="/icons/bell.png"></a>
+  <a id="People"href="/search"class="icons iconsBoxTop"><img id="searchicon"class="navbar-icons" src="/icons/search.png"></a>
+  <a id="profile"href="/profile"class="icons iconsBoxTop"><img id="profileIcon" class="navbar-icons" src="<%=userphoto%>" /></a>
+
+</div>
+<div class="col-lg-1 col-md-1 col-sm-0.5 col-xs-1">
+  <a id="toggleSlide" class="icons menubutton" ><img class="navbar-icons menu"
+    src="/icons/open-menu.png"></a>
+</div>
+</div>
+    </div>
+  </nav>
+  </head>
+  <body>
+<div  id="slidebox" class="box">
+<ul  class="nav navbar-nav boxLinks">
+<li><a href="/contact">CONTACT US</a></li><br>
+<li><a href="/logout">LOG OUT</a></li>
+</ul>
+</div>
+<form id="disnotify" action="/disnotify" method="post">
+  <div id="notificationBox">
+  <input id="notifier" type="hidden" name="notifier"  value="<%=notify%>" />
+  </div>
+</form>
+
+
+
+
+    <div class="container">

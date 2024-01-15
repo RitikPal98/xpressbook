@@ -1,0 +1,14 @@
+<%-include("partials/Userheader")%>
+<input id="pageteller" type="hidden" name="page" value="compose" />
+
+<form  action="/compose" method="post">
+
+  <div class="form-group">
+    <label>Type your post</label>
+    <textarea class="form-control composeElements" name="postBody" rows="16" cols="180"
+  autofocus  required></textarea>
+  </div>
+<button style="float:right" type="submit" class="btn btn-primary" name="button">Post</button>
+</form>
+
+<%-include("partials/footer");-%>
