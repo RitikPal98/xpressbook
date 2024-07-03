@@ -504,7 +504,7 @@ app.post("/dislikes", function (req, res) {
 });
 
 app.post("/share", function (req, res) {
-  res.json("https://xpressbook.herokuapp.com/posts/" + req.body.postId);
+  res.json("https://xpressbook.onrender.com/posts/" + req.body.postId);
 });
 
 app.get("/people/:user/:all", function (req, res) {
