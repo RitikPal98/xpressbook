@@ -36,12 +36,10 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect(
-  "mongodb+srv://admin-ritik:mdbritikpal@cluster0.qvhbv.mongodb.net/ExpressBook",
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
-mongoose.set("useCreateIndex", true);
-mongoose.set("useFindAndModify", false);
+mongoose.connect(process.env.MDB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 const PostSchema = new mongoose.Schema({
   content: String,
   postBy: String,
